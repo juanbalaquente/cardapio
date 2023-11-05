@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hepta Slab',Helvetica, Arial;}
+
+
+h1 {
+    color: #FFFFFF; 
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background-color: lightgreen; 
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:lightgreen
+    ; 
+}
+
+#comida {
+    width: 100%;
+    padding: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+}
+
+#btnExcluir, #btnEditar {
+    background-color: tomato; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnExcluir:hover, #btnEditar:hover {
+    background-color: #555; 
+}
+
+#saida {
+    position: fixed;
+    position: absolute;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000000; 
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    background-color:lightblue; 
+    color: white;
+}
+
+/* th {
+    background-color: #020231; 
+} */
+input, select {
+    padding: 10px;
+
+    border: 2px solid #f4f4f4;
+}

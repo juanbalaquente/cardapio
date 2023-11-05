@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio semanal</title>
+    <link rel="stylesheet" href="style.css">   
+</head>
+
+<body>
+    <h1>Cardápio</h1>
+
+    <div>
+        Insira sua comida: <input type="text" id="comida" required>
+    </div><br>
+    Escolha um dia:
+    <select id="dia">
+        <option></option>
+        <option value="segunda">Segunda</option>
+        <option value="terca">Terça</option>
+        <option value="quarta">Quarta</option>
+        <option value="quinta">Quinta</option>
+        <option value="sexta">Sexta</option>
+        <option value="sabado">Sábado</option>
+        <option value="domingo">Domingo</option>
+    </select>
+    <br><br>
+    <div id="botoes">
+        <button id="btnExcluir">Excluir</button>
+        <button id="btnEditar">Editar</button>
+    </div>
+
+    <div id="saida">
+        <table id="tabela" border="0" width="100%" height="5%">
+            <tr>
+                <td width="30px"></td>
+                <td>Segunda</td>
+                <td>Terça</td>
+                <td>Quarta</td>
+                <td>Quinta</td>
+                <td>Sexta</td>
+                <td>Sábado</td>
+                <td>Domingo</td>
+            </tr>
+
+            <tr>
+                <td width="30px"></td>
+                <td id="segunda"></td>
+                <td id="terca"></td>
+                <td id="quarta"></td>
+                <td id="quinta"></td>
+                <td id="sexta"></td>
+                <td id="sabado"></td>
+                <td id="domingo"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
