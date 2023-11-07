@@ -2,11 +2,15 @@ const BD = {
     segunda: [],terca: [],quarta: [],quinta: [],sexta: [],sabado: [],domingo: []
 };
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const comida = document.querySelector('#comida');
     const dia = document.querySelector('#dia');
     const btnExcluir = document.getElementById('btnExcluir');
     const btnEditar = document.getElementById('btnEditar');
+
+
 
     comida.addEventListener('keyup', function (event) {
         if (event.key === 'Enter') {
@@ -23,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
 function enviar(comida, dia) {
     const produto = {
         comida: comida.value,
@@ -30,7 +36,11 @@ function enviar(comida, dia) {
         id: Date.now() 
     };
 
+
+
     BD[dia.value].push(produto);
+
+
 
     let tabelaDia = document.getElementById(dia.value);
     tabelaDia.innerHTML += `<tr><td><input type="checkbox" id="${produto.id}" onchange="verificar(this.id)"></td><td>${produto.comida}</td><td></td></tr><br>`;
@@ -41,6 +51,8 @@ function enviar(comida, dia) {
 
     console.log(BD);
 }
+
+
 
 function excluirItens() {
     for (const diaSemana in BD) {
@@ -56,6 +68,8 @@ function excluirItens() {
     }
     montarTabela(); 
 }
+
+
 
 function editarItens(comida, dia) {
     for (const diaSemana in BD) {
@@ -74,6 +88,12 @@ function editarItens(comida, dia) {
     montarTabela(); 
 }
 
+
+
+
+
+
+
 function montarTabela() {
     for (const diaSemana in BD) {
         if (BD.hasOwnProperty(diaSemana)) {
@@ -87,6 +107,8 @@ function montarTabela() {
         }
     }
 }
+
+
 
 function verificar(id) {
     console.log('Checkbox com ID', id, 'foi alterado');
